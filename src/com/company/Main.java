@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,9 @@ public class Main {
                 "Lost for Words",
                 "High Hopes"));
         Main m=new Main();
-        m.autorePrimaAnno(albums, 2000);
+        List<Integer> lista = Arrays.asList(10, 19, 20, 1, 2);
+        //m.autorePrimaAnno(albums, 2000);
+        m.listaOrdinata(lista);
     }
 
     public void autorePrimaAnno(List<Album> album, int anno){
@@ -36,5 +39,11 @@ public class Main {
         StringBuilder stringBuilder=new StringBuilder();
         String nomeCognome=stringBuilder.append("sILVIA").append(" ").append("LUSCHI").toString();
         System.out.println(nomeCognome);
+    }
+
+    public void listaOrdinata(List<Integer> album){
+
+        album.stream().forEachOrdered(System.out::println);
+
     }
 }
